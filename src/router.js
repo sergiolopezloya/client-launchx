@@ -12,7 +12,7 @@ const routes =  [
     component: () => import("./components/Explorer")
   },
   {
-    path: "/add",
+    path: "/explorers/add",
     name: "add-explorer",
     component: () => import("./components/AddExplorer")
   }
