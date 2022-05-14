@@ -1,23 +1,35 @@
 <template>
 <h4>Commander</h4>
-  <div v-if="currentExplorer" class="edit-form">
+  <div v-if="currentCommander" class="edit-form">
     <form>
       <div class="form-group">
         <label for="title">Nombre</label>
         <input type="text" disabled class="form-control" id="title"
-          v-model="currentExplorer.name"
+          v-model="currentCommander.name"
         />
       </div>
       <div class="form-group">
         <label for="title">Username</label>
         <input type="text" disabled class="form-control" id="title"
-          v-model="currentExplorer.username"
+          v-model="currentCommander.username"
         />
       </div>
       <div class="form-group">
-        <label for="title">Misión</label>
+        <label for="title">Stack Principal</label>
         <input type="text" class="form-control" id="title"
-          v-model="currentCommander.mission"
+          v-model="currentCommander.mainStack"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Con Asignaturas</label>
+        <input type="checkbox" class="form-control" id="title"
+          v-model="currentCommander.currentEnrollment"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Certificación Azure</label>
+        <input type="checkbox" class="form-control" id="title"
+          v-model="currentCommander.hasAzureCertification"
         />
       </div>
     </form>
